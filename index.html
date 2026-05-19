@@ -202,10 +202,14 @@
             </div>
           </div>
 
-          <form class="booking-form" data-booking-form>
+          <form class="booking-form" action="https://formspree.io/f/xpqnwolp" method="POST" data-booking-form>
             <label>
               Name
               <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
             </label>
             <label>
               Phone
@@ -227,7 +231,11 @@
             </label>
             <label class="span-full">
               Notes
-              <textarea name="notes" rows="4" placeholder="Pet hair, stains, paint concerns, preferred dates"></textarea>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Pet hair, stains, paint concerns, preferred dates"
+              ></textarea>
             </label>
             <button class="button primary span-full" type="submit">Send Request</button>
             <p class="form-status span-full" role="status" data-form-status></p>

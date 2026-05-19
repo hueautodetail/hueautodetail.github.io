@@ -232,6 +232,12 @@ h3 {
   transform: translateY(-2px);
 }
 
+.button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+  transform: none;
+}
+
 .button.primary {
   background: linear-gradient(135deg, var(--blue), var(--blue-dark));
   color: var(--white);

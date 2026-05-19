@@ -64,22 +64,38 @@ comparisonRanges.forEach((range) => {
 });
 
 if (form && statusText) {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const submitButton = form.querySelector("button[type='submit']");
     const data = new FormData(form);
-    const subject = encodeURIComponent("New detailing request");
-    const body = encodeURIComponent(
-      [
-        `Name: ${data.get("name") || ""}`,
-        `Phone: ${data.get("phone") || ""}`,
-        `Vehicle: ${data.get("vehicle") || ""}`,
-        `Package: ${data.get("package") || ""}`,
-        `Notes: ${data.get("notes") || ""}`,
-      ].join("\n")
-    );
+    data.append("_subject", "New detailing request from Hue Auto Detailing");
 
-    statusText.textContent = "Opening your email app with the request details.";
-    window.location.href = `mailto:hello@hueautodetailing.com?subject=${subject}&body=${body}`;
-    form.reset();
+    statusText.textContent = "Sending your request...";
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      statusText.textContent = "Thanks. Your request has been sent.";
+      form.reset();
+    } catch {
+      statusText.textContent = "Sorry, something went wrong. Please call or email us directly.";
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
   });
 }
