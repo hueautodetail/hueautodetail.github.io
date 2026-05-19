@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hue Auto Detailing provides premium auto detailing, interior cleaning, exterior washes, paint enhancement, and finish protection."
+    />
+    <title>Hue Auto Detailing | Premium Auto Detailing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Hue Auto Detailing home">
+        <img src="brand/hue-auto-detailing.png" alt="Hue Auto Detailing" />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" data-nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="Hue Auto Detailing">
+        <img src="images/carousel-1.jpg" alt="Freshly detailed black Audi in a driveway" class="hero-image" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <img class="hero-logo" src="brand/hue-auto-detailing-white.png" alt="Hue Auto Detailing" />
+          <h1>Mobile detailing with a sharper finish.</h1>
+          <p class="hero-copy">
+            Mobile Detailing serving the Denver Metro Area.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Request a Detail</a>
+            <a class="button ghost" href="#gallery">View Results</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="about-mark" aria-hidden="true">
+          <img src="brand/hue-mark.png" alt="" />
+        </div>
+        <div class="section-copy">
+          <p class="eyebrow">About Hue</p>
+          <h2>Professional level auto detailing that comes to you.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            At Hue Auto Detailing, the care and cleanliness your car receives is our top priority. 
+          </p>
+          <p>
+            Whether you are wanting a simple maintenance detail, or a full on disaster detail, we have you covered! We pride ourselves upon attention to detail and customer satisfaction, and guarantee you will be satisfied with our results.
+          </p>
+        </div>
+      </section>
+
+      <section class="section services" aria-label="Services">
+        <div class="section-heading">
+          <p class="eyebrow">What We Do</p>
+          <h2>Packages to suit your needs.</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Interior</h3>
+            <p>Carpet Shampoo and Steam Extraction, Interior Wipe-Down, Glass Cleaning, and Pet Hair Removal.</p>
+          </article>
+          <article class="service-card featured">
+            <h3>Interior + Exterior</h3>
+            <p>
+              Carpet Shampoo and Steam Extraction, Interior Wipe-Down, Glass Cleaning, Pet Hair Removal, Pre-rinse,
+              Hand wash, Wheel Cleaning, Tire Shine, and Hand dry.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3>Exterior</h3>
+            <p>Pre-rinse, Hand wash, Wheel Cleaning, Tire Shine, Hand dry.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery</p>
+          <h2>Recent results from Hue Auto Detailing.</h2>
+        </div>
+
+        <div class="carousel" aria-label="Results photo carousel">
+          <div class="carousel-frame">
+            <img class="carousel-slide is-active" src="images/carousel-1.jpg" alt="Detailed black Audi sedan" />
+            <img class="carousel-slide" src="images/carousel-2.jpg" alt="Detailed silver Subaru SUV" />
+            <img class="carousel-slide" src="images/carousel-3.jpg" alt="Detailed result photo three" />
+            <img class="carousel-slide" src="images/carousel-4.jpg" alt="Detailed result photo four" />
+          </div>
+          <div class="carousel-controls">
+            <button class="icon-button" type="button" aria-label="Previous result photo" data-carousel-prev>&larr;</button>
+            <div class="carousel-dots" aria-label="Choose result photo">
+              <button type="button" class="is-active" aria-label="Show result photo 1" data-carousel-dot></button>
+              <button type="button" aria-label="Show result photo 2" data-carousel-dot></button>
+              <button type="button" aria-label="Show result photo 3" data-carousel-dot></button>
+              <button type="button" aria-label="Show result photo 4" data-carousel-dot></button>
+            </div>
+            <button class="icon-button" type="button" aria-label="Next result photo" data-carousel-next>&rarr;</button>
+          </div>
+        </div>
+
+        <div class="before-after">
+          <div class="section-heading compact">
+            <p class="eyebrow">Before &amp; After</p>
+            <h2>Our before and after shots.</h2>
+          </div>
+
+          <div class="comparison-grid">
+            <article class="comparison" data-comparison>
+              <div class="comparison-stage" style="--position: 50%">
+                <img class="comparison-image" src="images/before-1.jpg" alt="Vehicle before detail photo one" />
+                <div class="comparison-after">
+                  <img class="comparison-image" src="images/after-1.jpg" alt="Vehicle after detail photo one" />
+                </div>
+                <span class="comparison-label before-label">Before</span>
+                <span class="comparison-label after-label">After</span>
+                <span class="comparison-handle" aria-hidden="true"></span>
+                <input
+                  class="comparison-range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Slide to compare before and after photo one"
+                />
+              </div>
+            </article>
+
+            <article class="comparison" data-comparison>
+              <div class="comparison-stage" style="--position: 50%">
+                <img class="comparison-image" src="images/before-2.jpg" alt="Vehicle before detail photo two" />
+                <div class="comparison-after">
+                  <img class="comparison-image" src="images/after-2.jpg" alt="Vehicle after detail photo two" />
+                </div>
+                <span class="comparison-label before-label">Before</span>
+                <span class="comparison-label after-label">After</span>
+                <span class="comparison-handle" aria-hidden="true"></span>
+                <input
+                  class="comparison-range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Slide to compare before and after photo two"
+                />
+              </div>
+            </article>
+
+            <article class="comparison" data-comparison>
+              <div class="comparison-stage" style="--position: 50%">
+                <img class="comparison-image" src="images/before-3.jpg" alt="Vehicle before detail photo three" />
+                <div class="comparison-after">
+                  <img class="comparison-image" src="images/after-3.jpg" alt="Vehicle after detail photo three" />
+                </div>
+                <span class="comparison-label before-label">Before</span>
+                <span class="comparison-label after-label">After</span>
+                <span class="comparison-handle" aria-hidden="true"></span>
+                <input
+                  class="comparison-range"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Slide to compare before and after photo three"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Contact Us</p>
+            <h2>Ready to bring the shine back?</h2>
+            <p>
+            <p>
+              Fill out the information listed below and we'll get back to you as soon as possible.
+            </p>
+            <div class="contact-list">
+              <!-- Update these with your real business phone and email. -->
+              <a href="tel:+17209330842">(720) 933-0842</a>
+              <a href="mailto:contact@hueautodetail.com">contact@hueautodetail.com</a>
+            </div>
+          </div>
+
+          <form class="booking-form" data-booking-form>
+            <label>
+              Name
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" autocomplete="tel" required />
+            </label>
+            <label>
+              Vehicle
+              <input name="vehicle" type="text" placeholder="Year, make, model" required />
+            </label>
+            <label>
+              Service
+              <select name="package" required>
+                <option value="">Select a service</option>
+                <option>Interior</option>
+                <option>Exterior</option>
+                <option>Interior + Exterior</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label class="span-full">
+              Notes
+              <textarea name="notes" rows="4" placeholder="Pet hair, stains, paint concerns, preferred dates"></textarea>
+            </label>
+            <button class="button primary span-full" type="submit">Send Request</button>
+            <p class="form-status span-full" role="status" data-form-status></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="brand/hue-auto-detailing.png" alt="Hue Auto Detailing" />
+      <p>&copy; <span data-year></span> Hue Auto Detailing. All rights reserved.</p>
+      <a href="#home">Back to top</a>
+    </footer>
+  </body>
+</html>
